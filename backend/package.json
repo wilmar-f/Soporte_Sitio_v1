@@ -1,0 +1,17 @@
+{
+  "name": "portal-soporte-backend",
+  "version": "1.0.0",
+  "description": "Backend para Portal Soporte en Sitio - Corbeta Colombiana de Comercio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "xlsx-template": "^1.2.1"
+  }
+}

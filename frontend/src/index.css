@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --corbeta-blue: #1a3a5c;
+    --corbeta-blue-light: #2563a8;
+    --corbeta-gold: #e8a900;
+    --corbeta-gold-light: #ffd966;
+    --corbeta-gray: #f0f4f8;
+    --corbeta-dark: #0d1f35;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: linear-gradient(135deg, #0d1f35 0%, #1a3a5c 40%, #2563a8 100%);
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  input, select, textarea {
+    @apply focus:outline-none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#2563a8] hover:bg-[#1a3a5c] text-white font-semibold px-6 py-2.5 rounded-lg
+           transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 hover:bg-white/20 text-white font-medium px-5 py-2 rounded-lg
+           border border-white/20 transition-all duration-200 active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium px-5 py-2 rounded-lg
+           transition-all duration-200 active:scale-95;
+  }
+
+  .btn-success {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2.5 rounded-lg
+           transition-all duration-200 shadow-md active:scale-95;
+  }
+
+  .btn-gold {
+    @apply bg-[#e8a900] hover:bg-[#d49800] text-[#0d1f35] font-bold px-6 py-2.5 rounded-lg
+           transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl;
+  }
+
+  .form-card {
+    @apply bg-white rounded-2xl shadow-xl border border-gray-100;
+  }
+
+  .form-field {
+    @apply flex flex-col gap-1;
+  }
+
+  .form-label {
+    @apply text-sm font-semibold text-gray-700 uppercase tracking-wide;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2.5 border border-gray-200 rounded-lg bg-gray-50
+           focus:bg-white focus:border-[#2563a8] focus:ring-2 focus:ring-[#2563a8]/20
+           transition-all duration-150 text-gray-800 placeholder-gray-400 text-sm;
+  }
+
+  .form-input-error {
+    @apply border-red-400 bg-red-50 focus:border-red-500 focus:ring-red-200;
+  }
+
+  .form-textarea {
+    @apply w-full px-3 py-2.5 border border-gray-200 rounded-lg bg-gray-50
+           focus:bg-white focus:border-[#2563a8] focus:ring-2 focus:ring-[#2563a8]/20
+           transition-all duration-150 text-gray-800 placeholder-gray-400 text-sm resize-none;
+  }
+
+  .form-select {
+    @apply w-full px-3 py-2.5 border border-gray-200 rounded-lg bg-gray-50
+           focus:bg-white focus:border-[#2563a8] focus:ring-2 focus:ring-[#2563a8]/20
+           transition-all duration-150 text-gray-800 text-sm cursor-pointer;
+  }
+
+  .form-error {
+    @apply text-red-500 text-xs mt-0.5 flex items-center gap-1;
+  }
+
+  .section-header {
+    @apply flex items-center gap-2 text-[#1a3a5c] font-bold text-base uppercase tracking-wider
+           border-b-2 border-[#2563a8]/30 pb-2 mb-4;
+  }
+
+  .word-counter {
+    @apply text-xs font-medium;
+  }
+
+  .word-counter-ok {
+    @apply text-gray-400;
+  }
+
+  .word-counter-warn {
+    @apply text-amber-500;
+  }
+
+  .word-counter-over {
+    @apply text-red-500 font-bold;
+  }
+
+  .tab-active {
+    @apply bg-[#1a3a5c] text-white font-semibold shadow-md;
+  }
+
+  .tab-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200 font-medium;
+  }
+
+  .historial-row {
+    @apply flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10
+           hover:bg-white/10 transition-all duration-150 text-sm text-white/80;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-admin {
+    @apply bg-[#e8a900] text-[#0d1f35];
+  }
+
+  .badge-tecnico {
+    @apply bg-[#2563a8] text-white;
+  }
+
+  .spinner {
+    @apply animate-spin rounded-full border-4 border-white/30 border-t-white;
+  }
+
+  .logo-navbar {
+    @apply h-8 w-auto object-contain filter brightness-0 invert opacity-90
+           hover:opacity-100 transition-opacity duration-200;
+  }
+
+  .logo-navbar-color {
+    @apply h-8 w-auto object-contain hover:scale-105 transition-transform duration-200;
+  }
+}

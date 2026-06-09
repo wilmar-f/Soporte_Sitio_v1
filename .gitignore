@@ -1,0 +1,13 @@
+# Backend temporales
+backend/tmp/
+backend/node_modules/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# General
+.env
+*.log
+.DS_Store
+Thumbs.db
